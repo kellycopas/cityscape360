@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
+	</head>
+
+	<body>
+		
+		<div class="container">
+			
+			<img class="logo" src="img/logo3.png" alt="T-inspire" />
+			
+			<h1>Where will you go next?</h1>
+			<!--<img class="arrowdn" src="img/arrow_down.png" alt="arrow down" />-->
+			<img class="header" src="img/home_header.jpg" alt="hero image" />
+			
+		</div>
+
+
+		<div class="map-container">
+				<div class="heading">
+					<p>So you want to travel but don't know where to start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. <br/>Use the map below to start searching. Or let T-inspire suggest a randomly selected city for you...</p>
+				</div>
+				<button id="random" type="button">Suggest a City</button>
+				<div id="mapid"></div>
+					<script type="text/javascript" src="data.js"></script>
+					<script type="text/javascript" src="map.js"></script>
+		</div>
+				
+		<div class="grid-container-one">
+			<h2>Trending Destinations</h2>
+				<div id="barcelona">
+					<h3>Barcelona, Spain</h3>
+					<img src="img/barcelona.jpg" alt="Barcelona" />
+				</div>
+				<div id="copenhagen">
+					<h3>Copenhagen, Denmark</h3>
+					<img src="img/copenhagen.jpg" alt="Copenhagen" />
+				</div>
+				<div id="positano">
+					<h3>Positano, Italy</h3>
+					<img src="img/positano.jpg" alt="Positano" />
+				</div>
+				<div id="mexico">
+					<h3>Mexico City, Mexico</h3>
+					<img src="img/mexico.jpg" alt="Mexico" />
+				</div>
+		</div>
+
+		<div class="grid-container-two">
+			<h2>What type of traveller are you?</h2>
+			<div id="block1">
+				<h3>On a budget</h3>
+			</div>
+			<div id="block2">
+				<h3>Single traveller</h3>
+			</div>
+			<div id="block3">
+				<h3>Adventurer</h3>
+			</div>
+			<div id="block4">
+				<h3>Relax & chill</h3>
+			</div>
+			<div id="block5">
+				<h3>History buff</h3>
+			</div>
+			<div id="block6">
+				<h3>Young love</h3>
+			</div>
+			<div id="block7">
+				<h3>Festival lovers</h3>
+			</div>
+			<div id="block8">
+				<h3>Groups</h3>
+			</div>
+			<div id="block9">
+				<h3>Foodie</h3>
+			</div>
+		</div>
+
+
+
+		<!--<footer>
+			<p>&copy; T-inspire 2019</p>
+			<p>Sitemap</p>
+		</footer>-->
+
+
+	</body>
+
+
+</html>
