@@ -12,7 +12,7 @@ body {
   z-index: -99;
 }
 
-.container {
+.hero {
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -21,7 +21,29 @@ body {
 	min-height: 120vh;
 }
 
-.container h1 {
+.hero ul {
+	display: flex;
+	list-style: none;
+	font-size: 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.hero ul a {
+	text-decoration: none;
+	color: #000;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.hero ul a i {
+	margin: 0 3px 0 3px;
+}
+
+.hero h1 {
 	position: absolute;
 	font-family: 'Amatic SC', cursive;
 	font-size: 70px;
@@ -88,12 +110,38 @@ body {
 }
 
 .arrowdn {
-	width: 45px;
-	height: 45px;
+	width: 30px;
+	height: 30px;
 	position: absolute;
-	align-items: center;
 	bottom: 0;
-	margin: 0 25px 20px 25px;
+	margin: 0 0 180px 0;
+	-webkit-animation: bounce 1.8s infinite 1.8s;
+  	animation: bounce 1.8s infinite 1.8s;
+  	-webkit-transition: all .2s ease-in;
+  	transition: all .2s ease-in;
+}
+
+/* keyframes code based on: https://codepad.co/snippet/YPDXE33r */
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 .video-link a {
@@ -112,6 +160,7 @@ body {
 	padding-left: 10px;
 }
 
+
 /* ------ Home Page ------- */
 
 .header {
@@ -123,23 +172,25 @@ body {
 	z-index: -1;
 }
 
-.map-container {
+.section1 {
 	display: flex;
 	position: relative;
-	align-items: center;
-	justify-content: center;
 	flex-direction: row;
-	min-height: 140vh;
+	margin-bottom: 20px;
 }
 
 .heading {
-	align-self: flex-start;
-	width: 65%;
+	width: 75%;
 	font-size: 20px;
 	font-weight: 300;
-	padding-top: 10px;
+	padding: 20px 40px 0 40px;
 	line-height: 28px;
 	text-align: left;
+}
+
+.randombtn {
+	max-width: 100%;
+	margin: auto;
 }
 
 #random {
@@ -148,13 +199,12 @@ body {
 	font-size: 26px;
 	text-align: center;
 	padding: 20px 60px 20px 60px;
-	margin-top: 30px;
+	margin: 30px 30px 10px 30px;
 	text-decoration: none;
 	color: #fff;
 	border-radius: 8px;
 	border: none;
 	cursor: pointer;
-	align-self: flex-start;
 }
 
 #random:focus {
@@ -163,16 +213,26 @@ body {
 	border: none;
 }
 
+.map-container {
+	position: relative;
+	height: 0;
+	margin: auto;
+	width: 90%;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+}
+
 #mapid {
-	width: 80vw;
-	height: 80%;
-	margin-top: 60px;
 	position: absolute;
-	align-items: center;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .grid-container-one {
 	height: 100vh;
+	margin-top: 30px;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 10% 45% 45%;
@@ -237,9 +297,8 @@ body {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 10% 30% 30% 30% 10%;
+	grid-template-rows: 30% 30% 30% 10%;
 	grid-template-areas: 
-	"h h h h h h h h h h h h"
 	"one one one one two two two two three three three three"
 	"four four four four five five five five six six six six"
 	"seven seven seven seven eight eight eight eight nine nine nine nine";
@@ -248,11 +307,8 @@ body {
 	margin-left: 20px;
 }
 
-.grid-container-two h2 {
-	grid-area: h;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 20px;
+#trips {
+	padding: 30px 20px 10px 20px;
 	font-weight: 400;
 }
 
@@ -262,7 +318,7 @@ body {
 	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 1.5px;
-	margin-top: 0;
+	margin-top: 15px;
 }
 
 .grid-container-two #block1 {
@@ -337,6 +393,10 @@ body {
   	background-color: #bf80ff;
 }
 
+.grid-container-two i {
+	font-size: 25px;
+	margin-bottom: 55px;
+}
 
 /* ------ 360 Gallery Page ------- */
 
@@ -362,8 +422,4 @@ body {
 .btn {
 	cursor: pointer;
 }
-
-
-
-
 

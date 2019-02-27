@@ -6,30 +6,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="responsive.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="crossorigin=""/>
 		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="scroll.js"></script>
 	</head>
 
 	<body>
 		
-		<div class="container">
-			
+	<div class="container">
+		
+		<div class="hero">
 			<img class="logo" src="img/logo3.png" alt="T-inspire" />
-			
+			<ul>
+				<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+				<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+				<li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+				<li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+				<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			</ul>
 			<h1>Where will you go next?</h1>
-			<!--<img class="arrowdn" src="img/arrow_down.png" alt="arrow down" />-->
+			<a href="#section1"><img class="arrowdn" id="arrow" src="img/arrow.png" alt="arrow down" /></a>
 			<img class="header" src="img/home_header.jpg" alt="hero image" />
 			
 		</div>
-
-
-		<div class="map-container">
+		<div class="section1" id="section1">
 				<div class="heading">
-					<p>So you want to travel but don't know where to start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. <br/>Use the map below to start searching. Or let T-inspire suggest a randomly selected city for you...</p>
+					<p>So you want to travel but don't know where&nbsp;to&nbsp;start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. Use the map below to start searching. Or let us suggest a randomly selected city for&nbsp;you...</p>
 				</div>
-				<button id="random" type="button">Suggest a City</button>
+				<div class="randombtn"><button id="random" type="button">Suggest&nbsp;a&nbsp;City</button></div>
+		</div>
+
+		<div class="map-container" id="map-container">
+				<!--<div class="heading">
+					<p>So you want to travel but don't know where to start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. Use the map below to start searching. Or let us suggest a randomly selected city for you...</p>
+				</div>
+				<button id="random" type="button">Suggest&nbsp;a&nbsp;City</button>-->
 				<div id="mapid"></div>
 					<script type="text/javascript" src="data.js"></script>
 					<script type="text/javascript" src="map.js"></script>
@@ -55,33 +71,44 @@
 				</div>
 		</div>
 
+			<h2 id="trips">What kind of trip are you looking for?</h2>
+
 		<div class="grid-container-two">
-			<h2>What type of traveller are you?</h2>
-			<div id="block1">
+			<!--<h2>What kind of trip are you looking for?</h2>-->
+			<div class="blocks" id="block1">
+				<i class="fas fa-money-bill-wave"></i>
 				<h3>On a budget</h3>
 			</div>
-			<div id="block2">
+			<div class="blocks" id="block2">
+				<i class="fas fa-user"></i>
 				<h3>Single traveller</h3>
 			</div>
-			<div id="block3">
+			<div class="blocks" id="block3">
+				<i class="fas fa-mountain"></i>
 				<h3>Adventurer</h3>
 			</div>
-			<div id="block4">
+			<div class="blocks" id="block4">
+				<i class="fas fa-umbrella-beach"></i>
 				<h3>Relax & chill</h3>
 			</div>
-			<div id="block5">
+			<div class="blocks" id="block5">
+				<i class="fas fa-landmark"></i>
 				<h3>History buff</h3>
 			</div>
-			<div id="block6">
+			<div class="blocks" id="block6">
+				<i class="fas fa-heart"></i>
 				<h3>Young love</h3>
 			</div>
-			<div id="block7">
+			<div class="blocks" id="block7">
+				<i class="fas fa-sun"></i>
 				<h3>Festival lovers</h3>
 			</div>
-			<div id="block8">
+			<div class="blocks" id="block8">
+				<i class="fas fa-users"></i>
 				<h3>Groups</h3>
 			</div>
-			<div id="block9">
+			<div class="blocks" id="block9">
+				<i class="fas fa-utensils"></i>
 				<h3>Foodie</h3>
 			</div>
 		</div>
@@ -93,8 +120,8 @@
 			<p>Sitemap</p>
 		</footer>-->
 
-
-	</body>
+</div>
+</body>
 
 
 </html>

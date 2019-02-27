@@ -1,0 +1,130 @@
+
+/* ------ MEDIA QUERIES ------- */
+
+@media only screen and (max-width: 1024px) {
+	.hero {
+		min-height: 100vh !important;
+	}
+	.hero h1 {
+		padding-top: 90px !important;
+	}
+	.arrowdn {
+		margin: 0 0 150px 0 !important;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.grid-container-one {
+		height: 80vh !important;
+	}
+
+@media only screen and (max-width: 900px) {
+	.hero {
+		min-height: 80vh !important;
+	}
+	.hero h1 {
+		padding-top: 70px !important;
+		font-size: 60px !important;
+	}
+	.arrowdn {
+		margin: 0 0 120px 0 !important;
+		width: 25px !important;
+		height: 25px !important;
+	}
+	.logo {
+		width: 30vh !important;
+		height: 10vh !important;
+	}
+	.heading {
+		font-size: 18px !important;
+		padding: 20px 40px 0 40px !important;
+		line-height: 26px !important;
+	}
+	#random {
+		background-color: #5fd0a0 !important;
+		font-size: 22px !important;
+		padding: 20px 50px 20px 50px !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.hero {
+		min-height: 70vh !important;
+	}
+	.hero h1 {
+		padding-top: 70px !important;
+		font-size: 50px !important;
+	}
+	.arrowdn {
+		margin: 0 0 100px 0 !important;
+	}
+	.grid-container-one {
+		height: 60vh !important;
+	}
+}
+
+@media only screen and (max-width: 599px) {
+	.hero {
+		min-height: 50vh !important;
+	}
+	.hero h1 {
+		padding-top: 50px !important;
+		font-size: 35px !important;
+	}
+	.hero ul {
+		font-size: 20px !important;
+		margin-right: 20px !important;
+		margin-top: 15px !important;
+	}
+	.hero ul a i {
+		margin: 0 3px 0 3px !important;
+	}
+	.arrowdn {
+		margin: 0 0 75px 0 !important;
+		width: 20px !important;
+		height: 20px !important;
+	}
+	.logo {
+		width: 22vh !important;
+		height: 8vh !important;
+	}
+	.section1 {
+		display: block !important;
+	}
+	.heading {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	.randombtn {
+		display: block !important;
+		width: 159px !important;
+		max-width: 100% !important;
+		margin: auto !important;
+	}
+	#random {
+		font-size: 20px !important;
+		margin: 15px 0 30px 0 !important;
+		padding: 15px 40px 15px 40px !important;
+	}
+	.grid-container-one {
+		display: inline-block !important;
+	}
+	.grid-container-one h2 {
+		text-align: center !important;
+	}
+	#trips {
+		text-align: center !important;
+	}
+	.grid-container-two {
+		display: flex !important;
+		height: 30vh !important;
+		flex-flow: row wrap !important;
+  		justify-content: center !important;
+  		align-items: center !important;
+	}
+	.grid-container-two .blocks {
+		width: 300px !important;
+		height: 200px !important;
+		margin-bottom: 10px !important;
+	}
+}
+
