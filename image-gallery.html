@@ -23,7 +23,6 @@
         <img id="img1-thumb" crossorigin="anonymous" src="img/bridge_thumb.jpg">
         <img id="img2" crossorigin="anonymous" src="img/harbour.jpg">
         <img id="img2-thumb" crossorigin="anonymous" src="img/harbour_thumb.jpg">
-        <!--<img id="continue" crossorigin="anonymous" src="img/continue.jpg">-->
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
         <!-- Image linking -->
@@ -44,7 +43,7 @@
       <a-sky id="image-360" radius="10" src="#img1"></a-sky>
 
       <!-- Image links -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4" sound="on: click; src: url(audio/sound.mp3); autoplay: true; loop: true">
         <a-entity template="src: #link" data-src="#img1" data-thumb="#img1-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#img2" data-thumb="#img2-thumb"></a-entity>
       </a-entity>
@@ -61,6 +60,7 @@
       </a-entity>
     </a-scene>
 
+<img class="logo360" src="img/logo3.png" alt="T-inspire" />
 <div class="nav">
   <a id="continue" class="btn" href="/tinspire/home.html" title="Continue">Continue ></a>
 </div>

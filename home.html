@@ -20,7 +20,7 @@
 		
 	<div class="container">
 		
-		<div class="hero">
+		<div class="hero" id="hero">
 			<img class="logo" src="img/logo3.png" alt="T-inspire" />
 			<ul>
 				<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
@@ -36,45 +36,21 @@
 		</div>
 		<div class="section1" id="section1">
 				<div class="heading">
-					<p>So you want to travel but don't know where&nbsp;to&nbsp;start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. Use the map below to start searching. Or let us suggest a randomly selected city for&nbsp;you...</p>
+					<p>So you want to travel but don't know where&nbsp;to&nbsp;start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect&nbsp;destination.<br/> Use the map below to start searching. Or let us suggest a randomly selected city for&nbsp;you...</p>
 				</div>
 				<div class="randombtn"><button id="random" type="button">Suggest&nbsp;a&nbsp;City</button></div>
 		</div>
 
 		<div class="map-container" id="map-container">
-				<!--<div class="heading">
-					<p>So you want to travel but don't know where to start? <br/>T-inspire lets you virtually explore cities around the world to help you find your perfect destination. Use the map below to start searching. Or let us suggest a randomly selected city for you...</p>
-				</div>
-				<button id="random" type="button">Suggest&nbsp;a&nbsp;City</button>-->
 				<div id="mapid"></div>
 					<script type="text/javascript" src="data.js"></script>
 					<script type="text/javascript" src="map.js"></script>
 		</div>
 				
+
+			<h2 id="trips">What kind of trip are you looking&nbsp;for?</h2>
+
 		<div class="grid-container-one">
-			<h2>Trending Destinations</h2>
-				<div id="barcelona">
-					<h3>Barcelona, Spain</h3>
-					<img src="img/barcelona.jpg" alt="Barcelona" />
-				</div>
-				<div id="copenhagen">
-					<h3>Copenhagen, Denmark</h3>
-					<img src="img/copenhagen.jpg" alt="Copenhagen" />
-				</div>
-				<div id="positano">
-					<h3>Positano, Italy</h3>
-					<img src="img/positano.jpg" alt="Positano" />
-				</div>
-				<div id="mexico">
-					<h3>Mexico City, Mexico</h3>
-					<img src="img/mexico.jpg" alt="Mexico" />
-				</div>
-		</div>
-
-			<h2 id="trips">What kind of trip are you looking for?</h2>
-
-		<div class="grid-container-two">
-			<!--<h2>What kind of trip are you looking for?</h2>-->
 			<div class="blocks" id="block1">
 				<i class="fas fa-money-bill-wave"></i>
 				<h3>On a budget</h3>
@@ -113,13 +89,64 @@
 			</div>
 		</div>
 
+			<h2 id="trending">Trending&nbsp;Destinations</h2>
 
+		<div class="grid-container-two">
+				<div id="barcelona">
+					<h3>Barcelona, Spain</h3>
+					<img src="img/barcelona.jpg" alt="Barcelona" />
+				</div>
+				<div id="copenhagen">
+					<h3>Copenhagen, Denmark</h3>
+					<img src="img/copenhagen.jpg" alt="Copenhagen" />
+				</div>
+				<div id="positano">
+					<h3>Positano, Italy</h3>
+					<img src="img/positano.jpg" alt="Positano" />
+				</div>
+				<div id="mexico">
+					<h3>Mexico City, Mexico</h3>
+					<img src="img/mexico.jpg" alt="Mexico" />
+				</div>
+		</div>
 
-		<!--<footer>
-			<p>&copy; T-inspire 2019</p>
-			<p>Sitemap</p>
-		</footer>-->
+			<h2 id="influencers">Spotlight on this month...</h2>
 
+		<div class="flex-container-one">
+			<ul class="influencer1">
+				<li id="jack-content">
+					<div class="headshot"><img src="img/jack-icon.png" alt="Jack Morris" /></div>
+					<h3>Jack Morris <span style="font-family: 'Amatic SC', cursive;font-weight:700;font-size:20px;letter-spacing:1px;">(&#64;doyoutravel)</span></h3>
+					<p>27-year-old Jack Morris travels around the world with his girlfriend Lauren Bullen whom he met whilst visiting Fiji. Both have built up a massive following on Instagram due to their incredible photography skills showcasing their travel adventures. Originating from the UK, Jack quit his full-time job to follow his dream of going travelling in which he is now getting paid to share and promote destinations. He also blogs about how he takes and edits his photos to get them to look so&nbsp;good.</p>
+					<p><a id="blog" href="https://www.doyoutravel.com/" target="_blank" style="font-size:16px;text-decoration:underline;">https://www.doyoutravel.com/</a><br/><a href="https://www.instagram.com/doyoutravel/" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/channel/UCgTafVvP4c2Sp9M_LO6h_rA" target="_blank"><i class="fab fa-youtube-square"></i></a> <a href="https://www.facebook.com/doyoutravelphoto/" target="_blank"><i class="fab fa-facebook-square"></i></a> <a href="https://twitter.com/doyoutravel" target="_blank"><i class="fab fa-twitter-square"></i></a></p>
+				</li>
+
+				<li id="jack"><a href="https://www.instagram.com/doyoutravel/" target="_blank"><img src="img/jack.png" alt="Jack Morris" /></a></li>
+			</ul>
+		</div>
+		
+		<div class="footer">
+			<footer>
+					<p>&copy; 2019 T-inspire</p>
+					<p id="top"><a href="#hero">Back to top</a></p>
+					<ul>
+						<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+						<li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+						<li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+						<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+			</footer>
+			
+			<div class="bottom-section">
+				<ul>
+					<li><p><a href="#">Sitemap</a></p></li>
+					<li><p><a href="#">Privacy Policy</a></p></li>
+				</ul>
+
+			</div>
+		</div>
+	
 </div>
 </body>
 

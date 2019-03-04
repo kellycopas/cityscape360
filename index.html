@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>T-inspire</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="script.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="responsive.css">
 	</head>
 
 	<body>
 
-		<!-- Responsive fullwidth youtube video backgrounds:
-		     https://codepen.io/vaughndtaylor/pen/BKqybz
-			 https://codepen.io/dudleystorey/pen/PZyMrd -->
-		
-		<div class="container">
-			<div class="video-container" data-video-id="D151NXlRkhE" data-video-youtube-link="y" data-video-width-add="100" data-video-height-add="100">
-				<div class="video-overlay"></div>
-					<div class="player">
-						<div class="screen mute" id="player"></div>
-					</div>
-			</div>
-					
+		<!-- Based on code from https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
+		<div class="fullscreen-video">
+			<video autoplay muted loop id="myVideo">
+				<source src="video/video.mp4" type="video/mp4" />
+
+				<!-- Fallback image for browsers that do not support HTML5 video -->
+				<img src="img/header.jpg" alt="Fallback Image" title="Your browser does not support the <video> tag" />
+			</video>
+		</div>
 
 
-
-
-				<img class="logo" src="img/logo.png" alt="T-inspire" />
-				<p class="video-link">Video by <a href="https://www.youtube.com/watch?v=D151NXlRkhE">What Doesn't Suck?</a></p>
-
-				<!--<img class="arrowdn" src="img/arrow_down.png" alt="arrow down" />-->
+		<div class="content">
+			<img class="logo" src="img/logo.png" alt="T-inspire" />
+			<p class="video-link">Video by:&nbsp;<a href="https://www.youtube.com/watch?v=D151NXlRkhE">What Doesn't Suck?</a></p>
+			<a href="home.html"><img class="arrowrt" src="img/arrow_right.png" alt="arrow right" /></a>
 		</div>
 			
 
