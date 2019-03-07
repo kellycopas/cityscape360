@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="js/360script.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="img1" crossorigin="anonymous" src="img/bridge.jpg">
+        <img id="img1-thumb" crossorigin="anonymous" src="img/bridge_thumb.jpg">
+        <img id="img2" crossorigin="anonymous" src="img/harbour.jpg">
+        <img id="img2-thumb" crossorigin="anonymous" src="img/harbour_thumb.jpg">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+        <!-- Image linking -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+      </a-assets>
+
+      <!-- 360-degree image -->
+      <a-sky id="image-360" radius="10" src="#img1"></a-sky>
+
+      <!-- Image links -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4" sound="on: click; src: url(audio/sound.mp3); autoplay: true; loop: true">
+        <a-entity template="src: #link" data-src="#img1" data-thumb="#img1-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#img2" data-thumb="#img2-thumb"></a-entity>
+      </a-entity>
+
+      <!-- Camera + cursor -->
+      <a-entity camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+    </a-scene>
+
+<div id="page-loader"></div>
+<img class="logo360" src="img/logo3.png" alt="T-inspire" />
+<div class="nav">
+  <a id="continue" class="btn" href="/tinspire/home.html" title="Continue">Continue ></a>
+</div>
+  </body>
+
+</html>
