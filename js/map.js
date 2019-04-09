@@ -1,39 +1,58 @@
 
-// Create the map using Mapbox API and LeafletJS
-var mymap = L.map('mapid', {
-						zoomSnap: 2.5,
-						maxZoom: 18
-					});
+// Create the map using Mapbox API and LeafletJS - https://leafletjs.com/
 
+var mymap = L.map('mapid', {
+						// Set zoom level on initial load of map.
+						zoomSnap: 2.5,	
+						zoomDelta: 2
+					});
+					
+					// Create map layer with Mapbox - https://www.mapbox.com/
         			var layer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2VsbHljb3BhcyIsImEiOiJjaXl2cHY1Z2MwMDV1MndwMHVnZ2x1cTVjIn0.RdEixiOh4SCGg4Tpy33IIQ', {
 					attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 					accessToken: 'pk.eyJ1Ijoia2VsbHljb3BhcyIsImEiOiJjaXl2cHY1Z2MwMDV1MndwMHVnZ2x1cTVjIn0.RdEixiOh4SCGg4Tpy33IIQ'
 					}).addTo(mymap);
    				
-        			mymap.setView([40, 10], 2);
+   					// Set position of map.
+        			mymap.setView([30, 15], 2);
 
-        					function style(Feature) {
-						    return {
-								color: '#ff4d4d',
-								fillOpacity: 0,
-								weight: 2,
-						        dashArray: '1'
-						    };
-						}
-L.geoJson(country, {style: style}).addTo(mymap);
+        			// Listen for screen resize events.
+        			// Help from https://stackoverflow.com/questions/23910594/leaflet-responsive-design-creating-different-zoom-levels-for-different-screen
+					window.addEventListener('resize', function(event){
+					    // Get the width of the screen after the resize event.
+					    var width = document.documentElement.clientWidth;
+					    // If screen size is smaller than 599px, change position of map so Bristol stays visible.
+					    if (width < 599) {
+					        mymap.setView([45, 15], 2);
+					    }  else {
+					        mymap.setView([30, 15], 2);
+					    }
+					});
+
+        			// Create outline around United Kingdom and add to map.
+        			function style(Feature) {
+						return {
+							color: '#ff4d4d',
+							fillOpacity: 0,
+							weight: 2,
+						    dashArray: '1'
+						};
+					}
+					L.geoJson(country, {style: style}).addTo(mymap);
 						
 						
-// Create a marker for Bristol so that when clicked the map will zoom in and show popup message
+					// Create a marker for Bristol, so that when clicked, the map will zoom in and show popup message.
 					var point = L.marker([51.45523, -2.59665]).addTo(mymap);
 
 					point.on('click', function(e) {
 						mymap.setView(e.latlng, 13);
 						point.bindPopup('<b>Bristol, UK</b><br><a href="image_gallery.html" style="color:#000;">Enter the city...</a>').openPopup();
+						marker.bindPopup(popupContent).openPopup();
 					});
 				
 
-// Adding multiple markers to map
-// Help from http://bl.ocks.org/d3noob/9150014
+				// Adding multiple markers to map.
+				// Help from http://bl.ocks.org/d3noob/9150014
 				var planes = [
 				["Copenhagen, Denmark", 55.676098, 12.568337],
 				["Paris, France", 48.864716, 2.349014],

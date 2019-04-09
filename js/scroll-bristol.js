@@ -3,7 +3,7 @@
 // When down arrow is clicked, scroll to first section of page content.
 $(function() {
     $('#arrow').click (function(e) {
-    	e.preventDefault();
+      e.preventDefault();
       $('html, body').animate({scrollTop: $('div.section1').offset().top }, 'slow');
       return false;
     });
@@ -19,11 +19,11 @@ $(window).scroll(function() {
         $('#arrow-up').fadeOut(200);   
     }
 });
-// When arrow is clicked, scroll back to section 1.
+// When arrow is clicked, scroll back to top.
 $(function() {
     $('#arrow-up').click (function(e) {
       e.preventDefault();
-      $('html, body').animate({scrollTop: $('div.section1').offset().top }, 2000);
+      $('html, body').animate({scrollTop: $('div.hero').offset().top }, 2000);
       return false;
     });
   });

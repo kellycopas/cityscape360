@@ -1,10 +1,7 @@
 
-/* global AFRAME */
+// A-Frame JS code for 360 photo gallery - https://aframe.io/
 
-/**
- * Component that listens to an event, fades out an entity, swaps the texture, and fades it
- * back in.
- */
+// Component that listens to an event, fades out an entity, swaps the texture, and fades it back in.
 AFRAME.registerComponent('set-image', {
   schema: {
     on: {type: 'string'},
@@ -30,9 +27,8 @@ AFRAME.registerComponent('set-image', {
     });
   },
 
-  /**
-   * Setup fade-in + fade-out.
-   */
+  
+  // Setup fade-in + fade-out.
   setupFadeAnimation: function () {
     var data = this.data;
     var targetEl = this.data.target;
@@ -52,3 +48,4 @@ AFRAME.registerComponent('set-image', {
     });
   }
 });
+

@@ -1,0 +1,28 @@
+// A-Frame JS code for 360 video element - https://aframe.io/
+// Hides 'Click to play' message once user has clicked to start video.
+
+AFRAME.registerComponent('hide-once-playing', {
+  schema: {type: 'selector'},
+  init: function () {
+    this.onPlaying = this.onPlaying.bind(this);
+    this.onPause = this.onPause.bind(this);
+  },
+  play: function () {
+    if (this.data) {
+      this.data.addEventListener('playing', this.onPlaying);
+      this.data.addEventListener('pause', this.onPause);
+    }
+  },
+  pause: function () {
+    if (this.data) {
+      this.data.removeEventListener('playing', this.onPlaying);
+      this.data.removeEventListener('pause', this.onPause);
+    }
+  },
+  onPlaying: function (evt) {
+    this.el.setAttribute('visible', false);
+  },
+  onPause: function (evt) {
+    this.el.setAttribute('visible', true);
+  }
+});

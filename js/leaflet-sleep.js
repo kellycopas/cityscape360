@@ -1,3 +1,5 @@
+// Leaflet plugin - allows user to only interact with map once clicked to prevent usability scrolling issue.
+
 /*
  * Leaflet.Sleep
    Copyright (c) 2015 Daniel Montague
@@ -67,8 +69,8 @@ L.Map.mergeOptions({
   wakeTime: 1300,
   wakeMessageTouch: 'Touch to Wake',
   sleepNote: true,
-  hoverToWake: true,
-  sleepOpacity:.7,
+  hoverToWake: false, 
+  sleepOpacity:.6,
   sleepButton: L.Control.sleepMapControl
 });
 
@@ -126,7 +128,7 @@ L.Map.Sleep = L.Handler.extend({
     } else if (this._map.options.wakeMessage) {
       noteString = this._map.options.wakeMessage;
     } else if (this._map.options.hoverToWake) {
-      noteString = 'click or hover to open';
+      noteString = 'click to open';  // Message appearing on map
     } else {
       noteString = 'click to open';
     }
@@ -182,7 +184,7 @@ L.Map.Sleep = L.Handler.extend({
     }
 
     L.DomUtil.setOpacity( this._map._container, this._map.options.sleepOpacity);
-    this.sleepNote.style.opacity = .4;
+    this.sleepNote.style.opacity = .7;
     this._addSleepingListeners();
   },
 
