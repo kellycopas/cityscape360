@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>360&deg; Image Gallery</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/loading.js"></script>
+    <script src="js/loading.js"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
@@ -19,12 +23,22 @@
   </head>
 
   <body>
+
+    <!-- Creating the 360 photo gallery scene with A-Frame JS - https://aframe.io/ -->
+
+    <!-- Load in image and sound assets -->
     <a-scene>
       <a-assets>
-        <img id="img1" crossorigin="anonymous" src="img/bridge.jpg">
-        <img id="img1-thumb" crossorigin="anonymous" src="img/bridge_thumb.jpg">
-        <img id="img2" crossorigin="anonymous" src="img/harbour.jpg">
-        <img id="img2-thumb" crossorigin="anonymous" src="img/harbour_thumb.jpg">
+        <img id="img1" crossorigin="anonymous" src="img/bridge.jpg" alt="Clifton Suspension Bridge">
+        <img id="img1-thumb" crossorigin="anonymous" src="img/bridge_thumb.jpg" alt="Clifton Suspension Bridge thumbnail">
+        <img id="img2" crossorigin="anonymous" src="img/harbour.jpg" alt="Bristol Harbourside">
+        <img id="img2-thumb" crossorigin="anonymous" src="img/harbour_thumb.jpg" alt="Bristol Harbourside thumbnail">
+        <img id="img3" crossorigin="anonymous" src="img/square.jpg" alt="Millennium Square">
+        <img id="img3-thumb" crossorigin="anonymous" src="img/square_thumb.jpg" alt="Millennium Square thumbnail">
+        <img id="img4" crossorigin="anonymous" src="img/broadmead.jpg" alt="Broadmead Shopping Centre">
+        <img id="img4-thumb" crossorigin="anonymous" src="img/broadmead_thumb.jpg" alt="Broadmead Shopping Centre thumbnail">
+        <img id="img5" crossorigin="anonymous" src="img/cathedral.jpg" alt="Bristol Cathedral">
+        <img id="img5-thumb" crossorigin="anonymous" src="img/cathedral_thumb.jpg" alt="Bristol Cathedral thumbnail">
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
         <!-- Image linking -->
@@ -44,14 +58,18 @@
       <!-- 360-degree image -->
       <a-sky id="image-360" radius="10" src="#img1"></a-sky>
 
-      <!-- Image links -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4" sound="on: click; src: url(audio/sound.mp3); autoplay: true; loop: true">
+      <!-- Image links on thumbnails -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -2 -4">
         <a-entity template="src: #link" data-src="#img1" data-thumb="#img1-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#img2" data-thumb="#img2-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#img3" data-thumb="#img3-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#img4" data-thumb="#img4-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#img5" data-thumb="#img5-thumb"></a-entity>
       </a-entity>
 
-      <!-- Camera + cursor -->
-      <a-entity camera look-controls>
+      <!-- Camera, cursor & background sound effect -->
+      <!-- Camera rotation allows positioning of first photo on page load --> 
+      <a-entity camera look-controls rotation="0 90 0"> 
         <a-cursor id="cursor"
           animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
           animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
@@ -59,14 +77,28 @@
           event-set__2="_event: mouseleave; color: black"
           fuse="true"
           raycaster="objects: .link"></a-cursor>
+          <!-- Adding background sound effect -->
+          <a-sound src="url(audio/sound.mp3)" autoplay="true" loop="true" volume="5"></a-sound>
       </a-entity>
     </a-scene>
 
-<div id="page-loader"></div>
-<img class="logo360" src="img/logo3.png" alt="T-inspire" />
-<div class="nav">
-  <a id="continue" class="btn" href="/tinspire/home.html" title="Continue">Continue ></a>
-</div>
+
+    <!-- Overlay content -->
+
+    <!-- Airplane page loader to display until page content has fully loaded -->
+    <div id="page-loader"></div>
+
+    <!-- Logo and navigation -->
+    <a href="home.html"><img class="logo360" src="img/logo2.png" alt="Cityscape 360" /></a>
+    <div class="nav">
+        <a id="continue" class="btn" href="/cityscape/bristol.html" title="Continue">Continue to city page <span>&rsaquo;</span></a>
+    </div>
+
+    <!-- Instructions -->
+    <div id="instructions">
+        <p>Hold down and drag the mouse to move around. <br/>Move the <i class="far fa-circle"></i> onto the image thumbnails to view another photo.</p>
+    </div>
+
   </body>
 
 </html>

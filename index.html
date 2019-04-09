@@ -1,35 +1,86 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>T-inspire</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<html lang="en">
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <!-- apple-mobile-web-app-capable for older than iOS10 devices. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Index</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-	<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/loading.js"></script>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="js/arrow-key-rotation.js"></script>
+    <script src="js/play-on-window-click.js"></script>
+    <script src="js/play-on-vrdisplayactivate-or-enter-vr.js"></script>
+    <script src="js/hide-once-playing.js"></script>
+    <script src="js/delay.js"></script>
+  </head>
 
-		<!-- Based on code from https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
-		<div class="fullscreen-video">
-			<video autoplay muted loop id="myVideo">
-				<source src="video/video.mp4" type="video/mp4" />
+  <body>
 
-				<!-- Fallback image for browsers that do not support HTML5 video -->
-				<img src="img/header.jpg" alt="Fallback Image" title="Your browser does not support the <video> tag" />
-			</video>
-		</div>
+    <!-- Creating the 360 video scene with A-Frame JS - https://aframe.io/ -->
+    <a-scene>
+    <a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr></a-videosphere>
+      
+      <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+      <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
+        <!-- Text element for display messaging. Hide once video is playing. -->
+        <a-entity id="msg" position="0 0 -1.5" text="align:center;
+                width:4;
+                wrapCount:100;
+                color:white;
+                value: EXPLORE THE WORLD IN 360.
 
+                Drag the mouse/swipe to move around.
 
-		<div class="content">
-			<img class="logo" src="img/logo.png" alt="T-inspire" />
-			<p class="video-link">Video by:&nbsp;<a href="https://www.youtube.com/watch?v=D151NXlRkhE">What Doesn't Suck?</a></p>
-			<a href="home.html"><img class="arrowrt" src="img/arrow_right.png" alt="arrow right" /></a>
-		</div>
-			
+                Click to start."
+                hide-once-playing="#video">
+        </a-entity>
+      </a-camera>     
+      
+      <!-- Wait for the video to load. -->
+      <a-assets>
+        <!-- Single source video. -->
+        <video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline> <!-- webkit-playsinline for older than iOS10 devices. -->
+          <!-- MP4 video source. -->
+          <source type="video/mp4" src="video/360-video.mp4" />
+        </video>
+      </a-assets>
+    </a-scene>
+    
 
-	</body>
+    <!-- Overlay content -->
 
+    <!-- Airplane page loader to display until page content has fully loaded -->
+    <div id="page-loader"></div>
+
+    <!-- Logo and navigation -->
+    <div class="video-overlay" >
+        <a href="home.html"><img class="logo360" src="img/logo2.png" alt="Cityscape 360" /></a>
+        <p class="video-link">Video by:&nbsp;<a href="https://www.youtube.com/watch?v=1_ifgJqLqTY&t=9s" target="_blank">Ryan Whitehead</a></p>
+        
+        <div class="social">
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+        </div>
+        <div class="continue" id="cont">
+         <a id="continue" class="btn" href="/cityscape/home.html" title="Continue">Continue to home &rsaquo;</a>
+        </div>
+    </div>
+
+  </body>
 
 </html>
