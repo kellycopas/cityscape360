@@ -1,28 +1,211 @@
 
-/* ------ MEDIA QUERIES ------- */
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+@media only screen and (max-width: 1500px) {
+	.grid-container-two {
+		grid-template-rows: 400px 400px !important;
+	}
+}
 
 
-@media only screen and (max-width: 1258px) {
-	.flex-container-one {
-		margin-right: 0;
-		margin-left: 20px;
+
+/*--------- LARGE DESKTOP SCREEN SIZE ----------*/
+
+@media (min-width: 1500px) {
+	.logo {
+		width: 280px !important;
 	}
-	.flex-container-one ul li#jack-content p {
-		padding-left: 40px;
-		padding-right: 40px;
+	.hero ul {
+		font-size: 35px !important;
 	}
-	.flex-container-one ul {
+  	.arrowdn {
+		width: 75px !important;
+		height: 70px !important;
+	}
+	.heading {
+		font-size: 24px !important;
+		line-height: 35px !important;
+	}
+	#random {
+		font-size: 30px !important;
+	}
+	#cities-btn {
+		font-size: 30px !important;
+	}
+	#trips {
+		font-size: 28px !important;
+	}
+	.grid-container-one h3 {
+		font-size: 40px !important;
+	}
+	.grid-container-one i {
+		font-size: 40px !important;
+		margin-bottom: 80px !important;
+	}
+	h2#trending {
+		font-size: 28px !important;
+	}
+	.grid-container-two h3 {
+		font-size: 40px !important;
+	}
+	h2#influencers {
+		font-size: 28px !important;
+	}
+	.flex-container-one h3 {
+		font-size: 24px !important;
+	}
+	.flex-container-one #jack-content p {
+		font-size: 18px !important;
+		line-height: 26px !important;
+		padding-left: 20% !important;
+		padding-right: 20% !important;
+	}
+	.flex-container-one #jack-content span {
+		font-size: 24px !important;
+	}
+	.flex-container-one #jack-content {
+		width: 80% !important;
+	}
+	.flex-container-one a {
+		font-size: 22px !important;
+	}
+	.hero h1.city {
+		font-size: 90px;
+	}
+	.backtomap {
+		font-size: 22px;
+	}
+	.grid-container-three img {
+		width: 100% !important;
+		height: 100% !important;
+		max-height: none !important;
+	}
+	.grid-container-three h4 {
+		font-size: 40px !important;
+		margin: 40px 20px 10px 20px;
+	}
+	.grid-container-three #text2 h4 {
+		margin: 50px 38px 10px 38px;
+	}
+	.grid-container-three #text3 h4 {
+		margin: 50px 38px 10px 38px;
+	}
+	.grid-container-three ol {
+		font-size: 17px !important;
+		line-height: 30px !important;
+	}
+	.grid-container-three ul {
+		font-size: 17px !important;
+		line-height: 30px !important;
+	}
+	.grid-container-three #text2 p {
+		font-size: 17px !important;
+		line-height: 24px !important;
+	}
+	.grid-container-three #text3 p {
+		font-size: 17px !important;
+		line-height: 24px !important;
+	}
+	.grid-container-three iframe {
+		height: 100% !important;
+	}
+	h2#instagram-heading {
+		padding-top: 260px;
+		font-size: 28px !important;
+	}
+	h2#comments {
+		font-size: 28px !important;
+	}
+	h2#cities {
+		font-size: 28px !important;
+	}
+	.grid-container-four .blocks {
+		margin-top: 130px !important;
+	}
+	.grid-container-four img {
+		max-height: 450px !important;
+	}
+	.grid-container-four h3 {
+		font-size: 40px !important;
+	}
+	.policy-hero ul {
+		font-size: 35px !important;
+	}
+	.policy-content {
+		height: 50vh !important;
+	}
+	footer p#top {
 		font-size: 14px !important;
-		line-height: 20px;
 	}
-	.flex-container-one ul p a#blog {
-		font-size: 14px !important;
-		line-height: 20px !important;
+	.policy-hero h1 {
+		font-size: 45px !important;
 	}
-	.flex-container-one ul li#jack-content h3 span {
+	.policy-hero a.arrow-back i {
+		font-size: 30px !important;
+		margin-left: 20px !important;
+		margin-bottom: 15px !important;
+	}
+	.sitemap-hero ul {
+		font-size: 35px !important;
+	}
+	.sitemap-hero h1 {
+		font-size: 45px !important;
+	}
+	.sitemap-hero a.arrow-back i {
+		font-size: 30px !important;
+		margin-left: 20px !important;
+		margin-bottom: 15px !important;
+	}
+	.logo360 {
+		width: 280px !important;
+	}
+	.social ul {
+		font-size: 35px !important;
+	}
+	.nav {
+		font-size: 16px !important;
+	}
+	.nav a span {
+		font-size: 18px !important;
+	}
+	#instructions {
+		font-size: 18px !important;
+		line-height: 26px !important;
+	}
+	#instructions p i {
 		font-size: 18px !important;
 	}
 }
+
+
+@media only screen and (max-width: 1258px) {
+	.grid-container-three ul {
+		line-height: 20px !important;
+	}
+	.grid-container-four {
+		height: 25vh !important;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.grid-container-three #text2 p {
+		line-height: 17px !important;
+	}
+	.grid-container-three ul {
+		line-height: 19px !important;
+	}
+	h2#cities {
+		margin-bottom: 110px !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 1052px) {
+	.grid-container-three {
+		margin: 40px 40px 450px 40px !important;
+	}
+}
+
 
 @media only screen and (max-width: 1024px) {
 	.hero {
@@ -32,21 +215,70 @@
 		padding-top: 90px !important;
 	}
 	.arrowdn {
-		margin: 0 0 150px 0 !important;
+		margin: 0 0 50px 0 !important;
+	}
+	.grid-container-two {
+		grid-template-rows: 300px 300px !important;
 	}
 	.flex-container-one {
-		margin-right: 0px;
-		margin-left: 0px;
+		margin-bottom: 40px !important;
 	}
-	.flex-container-one ul li#jack {
-		margin-right: 40px;
-		margin-left: 40px;
+	.grid-container-three #text1 {
+		padding: 20px 20px 30px 20px !important;
+	}
+	.grid-container-three #text3 {
+		padding-right: 10px !important;
+		padding-left: 10px !important;
+	}
+	h2#cities {
+		margin-bottom: 100px !important;
+		padding-bottom: 0 !important;
+	}
+	.grid-container-four {
+		height: 20vh !important;
+	}
+	.grid-container-four img {
+		height: 180px !important;
 	}
 }
 
 @media only screen and (max-width: 950px) {
-	.grid-container-two {
-		height: 80vh !important;
+	.grid-container-three {
+		height: 255vh !important;
+		display: flex !important;
+		flex-flow: row wrap !important;
+  		justify-content: flex-start !important;
+  		align-items: flex-start !important;
+  		margin: 40px 50px 380px 50px !important;
+	}
+	.grid-container-three ol {
+		padding-left: 30px !important;
+	}
+	.grid-container-three h4 {
+		margin: 10px 10px 10px 10px !important;
+	}
+	.grid-container-three #image2 {
+		display: none !important;
+	}
+	.grid-container-three #image2-mob img {
+		display: grid !important;
+		grid-area: three !important;
+	}
+	.grid-container-three #text2 {
+		grid-area: four !important;
+		padding: 20px 0 30px 0 !important;
+	}
+	.grid-container-three #text2 h4 {
+		margin: 15px 38px 10px 38px !important;
+	}
+	.grid-container-three #text3 {
+		padding: 20px 0 30px 0 !important;
+	}
+	.grid-container-three #text3 h4 {
+		margin: 15px 38px 10px 38px !important;
+	}
+	.grid-container-three #image3 {
+		width: 100% !important;
 	}
 }
 
@@ -59,13 +291,10 @@
 		font-size: 60px !important;
 	}
 	.arrowdn {
-		margin: 0 0 120px 0 !important;
-		width: 25px !important;
-		height: 25px !important;
-	}
-	.logo {
-		width: 30vh !important;
-		height: 10vh !important;
+		margin: 0 0 20px 0 !important;
+		width: 45px !important;
+		height: 40px !important;
+		padding: 8px !important;
 	}
 	.heading {
 		font-size: 18px !important;
@@ -75,26 +304,33 @@
 		font-size: 22px !important;
 		padding: 15px 50px 15px 50px !important;
 	}
-	.flex-container-one ul li#jack-content p {
-		padding-left: 30px;
-		padding-right: 30px;
+	#cities-btn {
+		font-size: 22px !important;
+		padding: 15px 50px 15px 50px !important;
 	}
-	.flex-container-one ul {
-		font-size: 12px !important;
-		line-height: 18px;
+	.grid-container-one {
+		height: auto !important;
 	}
-	.flex-container-one ul p a#blog {
-		font-size: 12px !important;
-		line-height: 18px !important;
+	.grid-container-one .blocks {
+		height: 200px !important;
 	}
-	.flex-container-one ul li#jack-content h3 span {
-		font-size: 16px !important;
+	h2#trending {
+		padding-top: 40px !important;
+	}
+	.flex-container-one {
+		margin-right: 60px !important;
+		margin-left: 60px !important;
+	}
+	.flex-container-one #jack-content p {
+		padding-right: 10% !important;
+		padding-left: 10% !important;
 	}
 	.footer {
-		margin-top: 0;
+		margin-top: 40px !important;
 	}
 }
 
+/*--------- TABLET SCREEN SIZE ----------*/
 @media only screen and (max-width: 768px) {
 	.hero {
 		min-height: 70vh !important;
@@ -104,48 +340,98 @@
 		font-size: 50px !important;
 	}
 	.arrowdn {
-		margin: 0 0 100px 0 !important;
+		display: none !important;
+	}
+	h2#cities {
+		margin-bottom: 10px !important;
+		padding-bottom: 0 !important;
 	}
 	.grid-container-two {
-		height: 60vh !important;
-	}
-	.flex-container-one {
-		min-height: 130vh;
-	}
-	.flex-container-one ul {
 		display: inline-block !important;
-		padding-left: 0;
-		font-size: 14px !important;
-		line-height: 20px;
+		margin-top: 20px !important;
+		height: auto !important;
 	}
-	.flex-container-one ul p a#blog {
-		font-size: 14px !important;
-		line-height: 20px !important;
+	.grid-container-four {
+		display: inline-block !important;
+		margin-top: 20px !important;
 	}
-	.flex-container-one ul li#jack-content p {
-		padding-left: 50px;
-		padding-right: 50px;
+	.grid-container-four .blocks {
+		margin-bottom: 20px !important;
 	}
-	.flex-container-one ul li#jack-content h3 span {
-		font-size: 18px !important;
+	.grid-container-four img {
+		height: auto !important;
+		max-height: 380px !important;
 	}
-	.flex-container-one ul li#jack-content {
-		width: 90%;
-		display: inline-block;
+	.policy-hero {
+		height: 30vh !important;
 	}
-	.flex-container-one ul li#jack img {
-		max-width: 350px;
-		margin-top: 50px;
+	.policy-hero h1 {
+		margin-top: 70px !important;
+		font-size: 28px !important;
 	}
-	.footer {
-		margin-top: 0;
+	.sitemap-hero {
+		height: 30vh !important;
 	}
-	.policy-content {
-		height: 70vh !important;
+	.sitemap-hero h1 {
+		margin-top: 70px !important;
+		font-size: 28px !important;
+	}
+	.sitemap-content .continents .continent {
+		padding: 0 !important;
+	}
+	#instructions {
+		display: none !important;
+	}
+	.a-enter-vr {
+		bottom: 20px !important;
 	}
 }
 
+
+@media only screen and (max-width: 740px) {
+	.grid-container-three {
+		height: 303vh !important;
+		margin-bottom: 0 !important;
+	}
+	h2#instagram-heading {
+		padding-top: 50px !important;
+	}
+}
+
+
+@media only screen and (max-width: 675px) {
+	.grid-container-one {
+		display: flex !important;
+		height: auto !important;
+		flex-flow: column wrap !important;
+  		justify-content: center !important;
+  		align-items: center !important;
+	}
+	.grid-container-one .blocks {
+		width: 300px !important;
+		height: 200px !important;
+		margin-bottom: 30px !important;
+	}
+	h2#instagram-heading {
+		padding-top: 0 !important;
+	}
+	.grid-container-three {
+		height: 305vh !important;
+	}
+}
+
+
+
+/*--------- MOBILE SCREEN SIZE ----------*/
 @media only screen and (max-width: 599px) {
+	.video-overlay p {
+		font-size: 10px !important;
+		margin-bottom: 3px !important;
+		margin-left: 3px !important;
+	}
+	.continue-show {
+		margin-bottom: 20px !important;
+	}
 	.hero {
 		min-height: 50vh !important;
 	}
@@ -155,23 +441,46 @@
 	}
 	.hero ul {
 		font-size: 20px !important;
-		margin-right: 20px !important;
-		margin-top: 15px !important;
 	}
 	.hero ul a i {
-		margin: 0 3px 0 3px !important;
+		margin: 0 2px 0 2px !important;
 	}
-	.arrowdn {
-		margin: 0 0 75px 0 !important;
-		width: 20px !important;
-		height: 20px !important;
+	.backtomap {
+		font-size: 10px !important;
+		margin-bottom: 10px !important;
+		margin-left: 10px !important;
+	}
+	.backtomap a {
+		padding: 5px 5px !important;
 	}
 	.logo {
-		width: 22vh !important;
-		height: 8vh !important;
+		width: 130px !important;
+	}
+	.logo360 {
+		width: 130px !important;
+	}
+	.nav {
+		top: 7px !important;
+		right: 5px !important;
+		font-size: 11px !important;
+	}
+	.nav a {
+		padding: 5px 10px !important;
+	}
+	.nav a span {
+		font-size: 14px !important;
 	}
 	.section1 {
 		display: block !important;
+	}
+	#arrow-up {
+		width: 35px !important;
+		height: 35px !important;
+	}
+	#arrow-up i {
+		left: 10px !important;
+		top: 7px !important;
+		font-size: 16px !important;
 	}
 	.heading {
 		font-size: 16px !important;
@@ -183,34 +492,155 @@
 		max-width: 100% !important;
 		margin: auto !important;
 	}
+	.cities-btn {
+		display: block !important;
+		width: 162px !important;
+		max-width: 100% !important;
+		margin: auto !important;
+	}
 	#random {
 		font-size: 20px !important;
 		margin: 0 0 30px 0 !important;
 		padding: 15px 40px 15px 40px !important;
 	}
-	.grid-container-one {
-		display: flex !important;
-		height: 280vh !important;
-		flex-flow: row wrap !important;
-  		justify-content: center !important;
-  		align-items: center !important;
+	#cities-btn {
+		font-size: 20px !important;
+		margin: 30px 0 30px 0 !important;
+		padding: 15px 40px 15px 40px !important;
 	}
-	.grid-container-one .blocks {
-		width: 300px !important;
-		height: 200px !important;
-		margin-bottom: 30px !important;
+	.flex-container-one {
+		margin-right: 40px !important;
+		margin-left: 40px !important;
 	}
-	.grid-container-two {
-		display: inline-block !important;
-		margin-top: 20px !important;
+	.flex-container-one #jack-content p {
+		font-size: 14px !important;
+		line-height: 20px !important;
 	}
-	footer ul {
-		font-size: 18px !important;
-		padding-left: 20px !important;
+	.policy-hero {
+		height: 20vh !important;
+	}
+	.policy-hero ul {
+		font-size: 20px !important;
+	}
+	.policy-hero ul a i {
+		margin: 0 2px 0 2px !important;
+	}
+	.policy-hero a.arrow-back i {
+		font-size: 16px !important;
+		margin-left: 8px !important;
+		margin-bottom: 8px !important;
+	}
+	.policy-hero h1 {
+		margin-top: 55px !important;
+		font-size: 22px !important;
 	}
 	.policy-content {
 		font-size: 14px !important;
-		height: 70vh !important;
+		line-height: 18px !important;
+		text-align: center !important;
+		align-items: center !important;
+	}
+	h2#instagram-heading {
+		font-size: 20px !important;
+	}
+	h2#comments {
+		font-size: 20px !important;
+		line-height: 24px !important;
+		padding-bottom: 20px !important;
+	}
+	h2#cities {
+		font-size: 20px !important;
+	}
+	.grid-container-three {
+		height: auto !important;
+		margin: 40px 40px 0 40px !important;
+	}
+	.grid-container-three #text2 h4 {
+		margin: 15px 20px 10px 20px !important;
+	}
+	.grid-container-three #text2 p {
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+	}
+	.grid-container-three ul {
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+	}
+	.grid-container-three #text3 h4 {
+		margin: 15px 20px 10px 20px !important;
+	}
+	.grid-container-three #text3 ul {
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+	}
+	.grid-container-three #text3 p {
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+	}
+	.grid-container-three #text3 ul li {
+		line-height: 21px !important;
+	}
+	.grid-container-four h3 {
+		font-size: 30px !important;
+	}
+	.signup p {
+		font-size: 16px !important;
+		line-height: 20px !important;
+	}
+	.signup #signup-btn {
+		display: block !important;
+		margin: auto !important;
+		margin-top: 13px !important;
+	}
+	.sitemap-hero {
+		height: 20vh !important;
+	}
+	.sitemap-hero ul {
+		font-size: 20px !important;
+	}
+	.sitemap-hero ul a i {
+		margin: 0 2px 0 2px !important;
+	}
+	.sitemap-hero a.arrow-back i {
+		font-size: 16px !important;
+		margin-left: 8px !important;
+		margin-bottom: 8px !important;
+	}
+	.sitemap-hero h1 {
+		margin-top: 55px !important;
+		font-size: 22px !important;
+	}
+	.sitemap-content .continents {
+		flex-direction: column !important;
+	}
+	.sitemap-content .continents .continent {
+		width: auto !important;
+	}
+	.sitemap-content h4 {
+		font-size: 30px !important;
+		letter-spacing: 1.3px !important;
+	}
+	footer {
+		height: 120px !important;
+	}
+	footer ul.social {
+		position: inherit !important;
+		display: flex !important;
+		justify-content: center !important;
+		padding-left: 0 !important;
+		margin-bottom: 0 !important;
+		font-size: 18px !important;
+	}
+	footer p {
+		padding-top: 15px !important;
+		margin-top: 0 !important;
+	}
+	footer ul.links {
+		margin: 0 !important;
+	}
+	footer p#top {
+		padding-top: 20px !important;
 	}
 }
+
 
